@@ -24,7 +24,7 @@ public class BillerDAO {
 			transaction = session.beginTransaction();
 			biller = new Biller();
 			biller.setName(billerName);
-			biller.setId((Integer) session.save(biller));
+			session.save(biller);
 			transaction.commit();
 		} catch (HibernateException he) {
 			he.printStackTrace();
