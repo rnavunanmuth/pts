@@ -16,7 +16,7 @@ import javax.persistence.Table;
 public class Biller {
 	
 	@Id
-	@SequenceGenerator(name = "sq_id", sequenceName = "biller_id")
+	@SequenceGenerator(name = "sq_id", sequenceName = "biller_id", allocationSize=1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_id")
 	@Column(name = "id", nullable = false)
 	private int id;
